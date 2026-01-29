@@ -1,0 +1,185 @@
+
+.sidebar {
+  font-family: 'IBM Plex Mono', monospace;
+  position: sticky; /* Fix sidebar to the viewport */
+  top: 0; /* Sticks to the top of it's container */
+  flex: 0 0 250px; /* flex-grow: 0, flex-shrink: 0, flex-basis: 250px */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 250px;
+  border-radius: 8px;
+  font-size: var(--font-size-body);
+  border: 0.1px dashed var(--box-shadow-color); /* Other options: inset, outset, groove, double, dashed, dotted */
+  margin: 0;
+  overflow-y: auto;
+  margin-top: 1rem;
+  margin-left: -0.125rem;
+
+  &:hover {
+    // transform: translateY(-2.5px);
+    box-shadow: 0 1px 2px var(--box-shadow-color);
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border: none;
+    border-radius: 0;
+    height: 100vh;
+    margin-bottom: 1rem;
+    display: none;
+  }
+
+  .card-title, .card-subtitle, .card-text, .card-link {
+    color: var(--heading-color);
+  }
+
+  .card-subtitle {
+    background-color: var(--bg-color);
+    opacity: 0.8;
+  }
+  
+  .section-title {
+    color: var(--text-color);
+    opacity: 0.8;
+  }
+  
+  .sidebar-card .card-link {
+    color: var(--heading-color);
+  
+    &:hover {
+      color: var(--heading-color);
+    }
+    font-size: 1rem;
+  }
+  
+  .sidebar-card img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .sidebar-card {
+    background-color: var(--bg-color);
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    border: none;
+
+    /* Adjust padding inside the card */
+    .card-body {
+      padding: 0rem;
+      color: var(--text-color);
+      }
+  
+    .card-title {
+      margin-top: 10px;
+      font-size: var(--font-size-subheading);
+      color: var(--heading-color);
+      font-weight: 700;
+      margin-left: 1rem;
+    }
+
+    .card-link {
+      color: var(--heading-color);
+      font-size: 1rem;
+
+      &:hover {
+        color: var(--heading-color);
+      }
+    }
+
+    // Current listen
+    h5 {
+      color: var(--heading-color);
+      font-size: var(--font-size-subsubheading);
+      font-weight: 700;
+      text-align: center;
+      margin: 0.5rem;
+      border-radius: 8px;
+
+      &:hover {
+        transform: translateY(-0.5px);
+        box-shadow: 0 1px 2px var(--box-shadow-color);
+      }
+    }
+  }
+
+  .course-highlight {
+    font-size: 0.9rem;
+    padding: 0rem;
+    background-color: var(--card-color);
+    margin-bottom: 0rem;
+    margin-top: 0.5rem;
+    list-style: none;
+  }
+
+  .course-highlight > li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    strong {
+      color: var(--heading-color);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .course-highlight > li > ul {
+    list-style-type: square;
+    list-style-position: outside;
+    margin-left: 0;
+    padding-left: 1.5em;
+    font-size: 0.8rem;
+  }
+
+  /* Mobile version of the sidebar */
+  @media (max-width: 767px) {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh; // Full height on mobile
+    display: none; // Hide by default
+    border: none;
+    border-radius: 0;
+    margin-bottom: 1rem;
+
+    &.active {
+      display: block; // Show when active (dropdown)
+      background-color: var(--bg-color);
+    }
+  }
+}
+
+.future-courses {
+  font-size: 0.9rem;
+  padding-left: 1.5em;
+  background-color: var(--card-color);
+  margin-bottom: 0rem;
+  margin-top: 0.5rem;
+  list-style-type: square;
+  list-style-position: outside;
+}
+
+.sidebar-profile-image {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.sidebar-course-image {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}

@@ -1,0 +1,120 @@
+.projects-section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  border-radius: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  &:hover {
+    transform: translateY(-1px);
+    background-color: var(--bg-color);
+  }
+
+  h2 {
+    font-size: var(--font-size-heading);
+    font-weight: 700;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  border: 0.1px solid var(--heading-color);
+
+  .btn {
+    // Project button opacity
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: var(--button-text);
+  }
+
+  h3 {
+    // Project title
+    font-size: var(--font-size-subsubheading);
+    color: var(--heading-color);
+  }
+
+  .links {
+    // View Project Buttons
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .featured-links {
+    flex-direction: row; /* Align buttons side by side for featured projects */
+    justify-content: center; /* Center the buttons */
+    gap: 30px; /* Adds space between buttons for featured projects */
+  }
+  
+  .live-button, .github-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: var(--font-size-project-button);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .live-button {
+    background-color: var(--button-bg);
+  }
+  
+  .github-button {
+    background-color: var(--button-bg)
+  }
+  
+  /* Ensure full width for non-featured projects */
+  .links:not(.featured-links) .live-button,
+  .links:not(.featured-links) .github-button {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px var(--box-shadow-color);
+    background-color: var(--card-color);
+  
+    .btn {
+      transition: opacity 0.15s;
+      opacity: 1;
+    }
+  }
+
+.card-body {
+  padding: 0;
+}
+
+
+.project-card p {
+  color: var(--text-color);
+}
+
+.project-card a {
+  color: var(--button-bg);
+}
+
+}
+

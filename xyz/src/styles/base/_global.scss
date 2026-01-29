@@ -1,0 +1,23 @@
+// src/styles/base/global.scss
+
+@use '../abstracts/variables';
+@use '../themes/themes' as themes;
+@use '../components/index' as components;
+
+// Apply global styles
+body, html {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: var(--font-size-base);
+    margin: 0.5rem;
+    padding: 0;
+    line-height: 1.2;
+    overflow-x: hidden;
+}
+
+/* Apply transitions to all elements */
+* {
+  transition: background-color 0.15s ease-in-out;
+}
+

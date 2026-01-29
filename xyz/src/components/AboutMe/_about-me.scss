@@ -1,0 +1,40 @@
+// src/components/AboutMe/_about-me.scss
+
+.about-me {
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 0.5rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 8px;
+
+  h2 {
+    font-size: var(--font-size-subheading);
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    margin-top: -1rem;
+  }
+
+  h5 {
+    color: var(--heading-color);
+    font-weight: 700;
+  }
+
+  p {
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding: 0.125rem;
+  }
+
+  ul {
+    li {
+      list-style: none;
+      padding: 0.5rem;
+    }
+
+    li::before {
+      content: "🖥️   ";
+    }
+  }
+}
